@@ -9,7 +9,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "Skills",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Node.js</li>
         <li>Next.js</li>
         <li>React</li>
@@ -23,7 +23,7 @@ const TAB_DATA = [
     title: "Experience",
     id: "Experience",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Umami Meats E-commerce Project</li>
         <li>Capstone Bookie Sports Betting Project</li>
         <li>BiteBook Restaurant Journal Project</li>
@@ -34,16 +34,13 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Education",
+    title: "Education/Certificates",
     id: "Education",
     content: (
-      <ul>
-        <li>Some College (Computer Science & Business)</li>
+      <ul className="list-disc pl-2">
         <li>Fullstack Academy Bootcamp</li>
-        <li>React</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>Javahsdhscript</li>
+        <li>DePaul University (Incomplete)</li>
+        <li>LinkedIn Javascript</li>
       </ul>
     ),
   },
@@ -62,9 +59,9 @@ const AboutSection = () => {
   return (
     <section>
       <div className="text-white">
-        <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <div className="md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <Image src="/about-image.png" width={500} height={500} />
-          <div>
+          <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
             <p className="text-base md:text-lg">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -72,7 +69,7 @@ const AboutSection = () => {
               delectus nesciunt exercitationem! Id totam, harum laboriosam
               voluptates nam assumenda maiores alias nemo!
             </p>
-            <div className="flex flex-row mt-8 gap-2">
+            <div className="flex flex-row mt-8 justify-start gap-2">
               {/* <TabButton
                 selectTab={() => handleTabChange("skills")}
                 active={tab === "skills"}
