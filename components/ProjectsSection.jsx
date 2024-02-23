@@ -1,11 +1,13 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 
 const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    desc: "Welcome to my personal showcase! Crafted with the latest React and Next.js technologies, this portfolio website is more than just a digital space—it's a vibrant reflection of my journey as a web developer. Here, you'll find a brief introduction about me, detailing my passion for technology and creative problem-solving. Dive into my resume to explore my professional experiences, skills, and the milestones I've achieved in the tech world. Most excitingly, this site features a gallery of my projects, each one a testament to my expertise and dedication in web development. Whether you're a fellow developer, a potential employer, or just curious, I invite you to explore, engage, and discover the world through my code!",
+    desc: "Welcome to my personal showcase!",
     image: "/images/projectPortfolio.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -14,7 +16,7 @@ const projectsData = [
   {
     id: 3,
     title: "React Portfolio Website",
-    desc: "Welcome to my personal showcase! Crafted with the latest React and Next.js technologies, this portfolio website is more than just a digital space—it's a vibrant reflection of my journey as a web developer. Here, you'll find a brief introduction about me, detailing my passion for technology and creative problem-solving. Dive into my resume to explore my professional experiences, skills, and the milestones I've achieved in the tech world. Most excitingly, this site features a gallery of my projects, each one a testament to my expertise and dedication in web development. Whether you're a fellow developer, a potential employer, or just curious, I invite you to explore, engage, and discover the world through my code!",
+    desc: "Crafted with the latest Next.js technologies",
     image: "/images/projectPortfolio.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -23,7 +25,7 @@ const projectsData = [
   {
     id: 3,
     title: "React Portfolio Website",
-    desc: "Welcome to my personal showcase! Crafted with the latest React and Next.js technologies, this portfolio website is more than just a digital space—it's a vibrant reflection of my journey as a web developer. Here, you'll find a brief introduction about me, detailing my passion for technology and creative problem-solving. Dive into my resume to explore my professional experiences, skills, and the milestones I've achieved in the tech world. Most excitingly, this site features a gallery of my projects, each one a testament to my expertise and dedication in web development. Whether you're a fellow developer, a potential employer, or just curious, I invite you to explore, engage, and discover the world through my code!",
+    desc: "A brief introduction about me.",
     image: "/images/projectPortfolio.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -32,13 +34,35 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
+  const [activeTag, setActiveTag] = useState("All");
+
+  const handleTagChange = (newTag) => {
+    setActiveTag(newTag);
+  };
+
+  const filteredProjects = projectsData.filter((project) =>
+    project.tag.includes(activeTag)
+  );
+
   return (
     <>
       <h2 className="text-center text-4xl font-bold text-white mt-4">
         My Projects
       </h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag
+          name="All"
+          onClick={handleTagChange}
+          isSelected={activeTag === "All"}
+        />
+        <ProjectTag
+          name="Web"
+          onClick={handleTagChange}
+          isSelected={activeTag === "Web"}
+        />
+      </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectsData.map((project) => (
+        {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
             imgUrl={project.image}
