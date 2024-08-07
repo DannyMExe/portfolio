@@ -9,25 +9,52 @@ const projectsData = [
     title: "React Portfolio Website",
     desc: "Welcome to my personal showcase!",
     image: "/images/projectPortfolio.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Projects"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 2,
+    title: "BiteBook (WIP)",
+    desc: "A web app utilizing Google Places to keep a personal list of favorite restaurants with comments/ratings",
+    image: "/images/bitebook.png",
+    tag: ["All", "Projects"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "React Portfolio Website",
-    desc: "Crafted with the latest Next.js technologies",
-    image: "/images/projectPortfolio.png",
-    tag: ["All", "Web"],
+    title: "Capstone Bookie",
+    desc: "A sports betting clone made as my capstone project from Fullstack Academy.",
+    image: "/images/bookie/FSAsb.png",
+    tag: ["All", "Projects"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
-    id: 3,
-    title: "React Portfolio Website",
-    desc: "A brief introduction about me.",
-    image: "/images/projectPortfolio.png",
-    tag: ["All", "Web"],
+    id: 4,
+    title: "Professional Website",
+    desc: "A professional website done for the client based on their designs.",
+    image: "/images/lerman.com.png",
+    tag: ["All", "Freelance"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 5,
+    title: "Organization Website",
+    desc: "A website done for the client's educational organization.",
+    image: "/images/institute.png",
+    tag: ["All", "Freelance"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 6,
+    title: "Umami Meats",
+    desc: "An e-commerce group project based on high end Japanese meat and sushi.",
+    image: "/images/umamimeats.png",
+    tag: ["All", "Projects"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -56,9 +83,14 @@ const ProjectsSection = () => {
           isSelected={activeTag === "All"}
         />
         <ProjectTag
-          name="Web"
+          name="Projects"
           onClick={handleTagChange}
-          isSelected={activeTag === "Web"}
+          isSelected={activeTag === "Projects"}
+        />
+        <ProjectTag
+          name="Freelance"
+          onClick={handleTagChange}
+          isSelected={activeTag === "Freelance"}
         />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
