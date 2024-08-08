@@ -28,18 +28,26 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            fugiat.
+            I'm a passionate fullstack web developer with experience in creating
+            dynamic and responsive web applications.
           </p>
           <div className="div">
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-white hover:bg-slate-200 text-white">
-              Hire Me
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </button>
+            <a href="mailto:dannyjmargolin@gmail.com" className="no-underline">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-white hover:bg-slate-200 text-white">
+                Hire Me
+              </button>
+            </a>
+            <a
+              href="/DannyMargolinResume.pdf"
+              download
+              className="no-underline"
+            >
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3">
+                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                  Download CV
+                </span>
+              </button>
+            </a>
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">

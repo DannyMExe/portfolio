@@ -10,12 +10,12 @@ const TAB_DATA = [
     id: "Skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
         <li>Next.js</li>
         <li>React</li>
         <li>PostgreSQL</li>
         <li>Sequelize</li>
         <li>Javascript</li>
+        <li>Node.js</li>
       </ul>
     ),
   },
@@ -24,12 +24,12 @@ const TAB_DATA = [
     id: "Experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>Umami Meats E-commerce Project</li>
-        <li>Capstone Bookie Sports Betting Project</li>
-        <li>BiteBook Restaurant Journal Project</li>
         <li>Freelance: zafralerman.com</li>
         <li>Freelance: lermaninstitute.org</li>
-        <li>Volunteer: HairWeShare.org WordPress Website</li>
+        <li>BiteBook Restaurant Journal Project</li>
+        <li>HairWeShare.org WordPress Website</li>
+        <li>Capstone Bookie Sports Betting Project</li>
+        <li>Umami Meats E-commerce Project</li>
       </ul>
     ),
   },
@@ -38,8 +38,9 @@ const TAB_DATA = [
     id: "Education",
     content: (
       <ul className="list-disc pl-2">
+        <li>Nassau Community College (Part-time)</li>
         <li>Fullstack Academy Bootcamp</li>
-        <li>DePaul University (Incomplete)</li>
+        <li>DePaul University</li>
         <li>LinkedIn Javascript</li>
       </ul>
     ),
@@ -57,17 +58,18 @@ const AboutSection = () => {
   };
 
   return (
-    <section>
+    <section id="about">
       <div className="text-white">
         <div className="md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <Image src="/about-image.png" width={500} height={500} />
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
             <p className="text-base md:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Recusandae suscipit eum nemo impedit eius inventore modi veniam
-              delectus nesciunt exercitationem! Id totam, harum laboriosam
-              voluptates nam assumenda maiores alias nemo!
+              Hi, I'm Danny Margolin. I have a background in web development,
+              starting with some college education, followed by a coding
+              bootcamp at Fullstack Academy. I then ventured into freelance
+              work, and I'm currently pursuing an associate's degree in computer
+              science at Nassau Community College.
             </p>
             <div className="flex flex-row mt-8 justify-start gap-2">
               {/* <TabButton

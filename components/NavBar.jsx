@@ -31,7 +31,7 @@ const NavBar = () => {
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           {" "}
-          LOGO
+          Danny Margolin
         </Link>
         <div className="mobile-menu block md:hidden">
           {navBarOpen ? (

@@ -10,7 +10,7 @@ const projectsData = [
     desc: "Welcome to my personal showcase!",
     image: "/images/projectPortfolio.png",
     tag: ["All", "Projects"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/DannyMExe/portfolio",
     previewUrl: "/",
   },
   {
@@ -28,8 +28,8 @@ const projectsData = [
     desc: "A sports betting clone made as my capstone project from Fullstack Academy.",
     image: "/images/bookie/FSAsb.png",
     tag: ["All", "Projects"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/DannyMExe/FSABookie",
+    previewUrl: "https://www.fsabookie.com/",
   },
   {
     id: 4,
@@ -37,8 +37,8 @@ const projectsData = [
     desc: "A professional website done for the client based on their designs.",
     image: "/images/lerman.com.png",
     tag: ["All", "Freelance"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/DannyMExe/zafra-lerman",
+    previewUrl: "https://zafralerman.com/",
   },
   {
     id: 5,
@@ -46,8 +46,8 @@ const projectsData = [
     desc: "A website done for the client's educational organization.",
     image: "/images/institute.png",
     tag: ["All", "Freelance"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/DannyMExe/lerman-institute",
+    previewUrl: "https://www.lermaninstitute.org/",
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const projectsData = [
     image: "/images/umamimeats.png",
     tag: ["All", "Projects"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://umami-meats.vercel.app/steaks",
   },
 ];
 
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <>
+    <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4">
         My Projects
       </h2>
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
