@@ -65,11 +65,11 @@ const AboutSection = () => {
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
             <p className="text-base md:text-lg">
-              Hi, I`&apos;`m Danny Margolin. I have a background in web
+              Hi, I&apos;m Danny Margolin. I have a background in web
               development, starting with some college education, followed by a
               coding bootcamp at Fullstack Academy. I then ventured into
-              freelance work, and I`&apos;`m currently pursuing an
-              associate`&apos;`s degree in computer science at Nassau Community
+              freelance work, and I&apos;m currently pursuing an
+              associate&apos;s degree in computer science at Nassau Community
               College.
             </p>
             <div className="flex flex-row mt-8 justify-start gap-2">
